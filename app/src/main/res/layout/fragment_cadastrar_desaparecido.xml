@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.rebec.cadevoce.view.CadastrarDesaparecidoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:padding="16dp">
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:errorEnabled="true">
+
+            <!--Nome-->
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_nome"
+                android:inputType="textPersonName" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdIdade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <!--Idade-->
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_idade"
+                android:inputType="number" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMRaca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:errorEnabled="true">
+
+            <!--Raça Spinner-->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/raca_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_raca"
+                app:errorEnabled="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdOlhos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:errorEnabled="true">
+
+            <!--Cor dos Olhos Spinner-->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/cor_dos_olhos_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_cor_olhos"
+                app:errorEnabled="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMTipoCabelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:errorEnabled="true">
+
+            <!--Tipo do Cabelo Spinner-->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/tipo_cabelo_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_tipo_cabelo"
+                app:errorEnabled="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdCorCabelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:errorEnabled="true">
+
+            <!--Cor do Cabelo Spinner-->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/cor_cabelo_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_cor_cabelo"
+                app:errorEnabled="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <!--Altura-->
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_altura"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdSexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:errorEnabled="true">
+
+            <!--Sexo Spinner-->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/sexo_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_sexo"
+                app:errorEnabled="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:errorEnabled="true">
+
+            <!--Estado Spinner-->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/estado_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_estado"
+                app:errorEnabled="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <!--Cidades-->
+            <AutoCompleteTextView
+                android:id="@+id/edtAutoCompleteCidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_cidade"
+                app:errorEnabled="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdDtDesaparecimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <!--Data do desaparecimento-->
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_dt_desaparecimento"
+                android:inputType="date" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdParentesco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:errorEnabled="true">
+
+            <!--Parentesco Spinner-->
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/parentesco_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_parentesco"
+                app:errorEnabled="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdTelefoneContato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <!--Telefone para contato-->
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_telefone"
+                android:inputType="phone" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Floating-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <!--Descrição-->
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/md_descricao"
+                android:inputType="textLongMessage"
+                android:singleLine="false" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!--Imagem de upload-->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edtMdUpload"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            app:errorEnabled="true">
+
+            <!--Deixar o texto e a imagem alinhados horizontalmente-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--Texto-->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="Carregar Foto"
+                    android:textSize="18sp" />
+
+                <!--Imagem-->
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginBottom="4dp"
+                    app:srcCompat="@android:drawable/stat_sys_upload" />
+
+            </LinearLayout>
+
+            <!--Linha cinza abaixo do texto (divisória)-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@android:color/darker_gray" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <CheckBox
+            android:id="@+id/termoResp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/md_termo_resp" />
+
+
+        <Button
+            android:id="@+id/salvarCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/md_salvar_cadastro" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>

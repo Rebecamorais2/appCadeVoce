@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">CadeVoce</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="facebook_app_id">158156681557323</string>
+    <string name="fb_login_protocol_scheme">fb158156681557323</string>
+
+    <!--Tela de login-->
+    <string name="login_email">E-mail</string>
+    <string name="login_senha">Senha</string>
+    <string name="login_button">Entrar</string>
+    <string name="login_buttonFacebook">Entrar pelo Facebook</string>
+
+
+    <string name="login_buttonGoogle">Entrar com o Google</string>
+
+    <string name="logout">Sair</string>
+    <string name="revoke">Revoke</string>
+    <string name="not_close_session">Não carregou a sessão</string>
+    <string name="not_revoke">Não revocou o acesso</string>
+    <string name="not_log_in">Não pode iniciar sessão</string>
+
+    <string name="recuperar_senha">Recuperar Senha</string>
+    <string name="cadastrarUser">Cadastrar-se</string>
+
+
+    <!--Tela home-->
+    <string name="loginButton">Entrar</string>
+    <string name="emailText">Email</string>
+    <string name="btnBuscar">Buscar</string>
+    <string name="btnCadastrar">Cadastrar</string>
+    <string name="btnCadastrosRecentes">Cadastros Recentes</string>
+    <string name="btnMeusCadastros">Meus Cadastros</string>
+    <string name="idCadastrarConta">Cadastrar-se</string>
+
+    // menu lateral
+    <string name="home">Home</string>
+    <string name="onde_procurar">Onde Procurar?</string>
+    <string name="perdidos">Encontrou alguém perdido?</string>
+    <string name="delegacia">Delegacia mais Próxima</string>
+    <string name="others">Outras opções"</string>
+    <string name="sobre">Sobre o aplicativo</string>
+    <string name="sair">Sair</string>
+
+    <!--menu-->
+    <string name="action_settings">Cofiguração</string>
+    <string name="title_activity_cadastro_usuario">CadastroUsuario</string>
+    <string name="title_activity_google_maps">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- Manter Desaparecido-->
+    <string name="md_nome">Nome completo</string>
+    <string name="md_idade">Idade aproximada</string>
+    <string name="md_raca">Raça</string>
+    <string name="md_cor_olhos">Cor dos olhos</string>
+    <string name="md_tipo_cabelo">Tipo do cabelo</string>
+    <string name="md_cor_cabelo">Cor do cabelo</string>
+    <string name="md_altura">Altura aproximada</string>
+    <string name="md_sexo">Sexo</string>
+
+
+    <string name="md_estado">Estado</string>
+    <string name="md_cidade">Cidade</string>
+
+
+    <string name="md_dt_desaparecimento">Data do desaparecimento</string>
+    <string name="md_parentesco">Parentesco</string>
+    <string name="md_telefone">Telefone para contato</string>
+    <string name="md_descricao">Descrição</string>
+
+    <string name="md_carregar_foto">Carregar foto</string>
+    <string name="md_salvar_cadastro">Salvar cadastro</string>
+    <string name="md_termo_resp">Aceitar os termos de responsabilidade</string>
+
+    <!--Tela Buscar-->
+    <string name="buscarNome">Buscar por Nome</string>
+    <string name="buscarFoto">Buscar por Foto</string>
+
+    <!--Tela Buscar por Foto-->
+    <string name="bf_atencao">Atenção: As fotos deverão ser tiradas preferencialmente de perfil (3x4) e distância máxima de 1m.</string>
+    <string name="bf_ativar_camera">Tirar foto: Ativar câmera</string>
+    <string name="bf_carregar_foto">Carregar foto: JPEG, PNG (Max.4MB)</string>
+
+    <!--Cadastro Usuário-->
+    <string name="usuario_email">E-mail</string>
+    <string name="usuario_senha">Senha</string>
+    <string name="usuario_confirma_senha">Confirmar Senha</string>
+    <string name="usuario_nome">Nome</string>
+    <string name="usuario_criar_conta">Criar Conta</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_cadastrar_usuario">CadastrarUsuarioActivity</string>
+</resources>
