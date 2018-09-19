@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.code.ksoap2-android:ksoap2-j2se:3.4.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.ksoap2-android/ksoap2-j2se/3.4.0/db647f6bb3d6f839ed8a424f8186052bee302428/ksoap2-j2se-3.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.ksoap2-android/ksoap2-j2se/3.4.0/3d7e29c0f203189c3d1f05bd3ba334ca978c7f39/ksoap2-j2se-3.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

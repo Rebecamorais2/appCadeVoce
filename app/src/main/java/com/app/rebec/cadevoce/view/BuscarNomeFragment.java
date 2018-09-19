@@ -18,6 +18,10 @@ import com.app.rebec.cadevoce.R;
  * Use the {@link BuscarNomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+
+import static android.app.Activity.RESULT_OK;
+
 public class BuscarNomeFragment extends Fragment {
 
 
@@ -27,5 +31,9 @@ public class BuscarNomeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_buscar_nome, container, false);
     }
+
+
+
+
 
 }

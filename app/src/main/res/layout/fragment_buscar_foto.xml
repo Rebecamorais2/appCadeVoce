@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.app.rebec.cadevoce.view.BuscarFotoFragment">
+
 
     <TextView
         android:id="@+id/Menu"
@@ -21,44 +26,59 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/IconeCarregarFoto"
-        android:layout_width="141dp"
-        android:layout_height="87dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Menu"
-        app:srcCompat="@drawable/ic_file_upload_black_24dp" />
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView1"
+        android:layout_above="@+id/button1" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:text="Upload" />
 
-    <ImageView
-        android:id="@+id/IconeTirarFoto"
-        android:layout_width="129dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/ic_photo_camera_black_24dp" />
+    <!--<ImageView-->
+        <!--android:id="@+id/IconeCarregarFoto"-->
+        <!--android:layout_width="141dp"-->
+        <!--android:layout_height="87dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.502"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/Menu" />-->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/bf_ativar_camera"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IconeTirarFoto"
-        app:layout_constraintVertical_bias="0.0" />
+    <!--<ImageView-->
+        <!--android:id="@+id/IconeTirarFoto"-->
+        <!--android:layout_width="129dp"-->
+        <!--android:layout_height="121dp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_below="@+id/Menu"-->
+        <!--android:layout_marginStart="108dp"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/textView2"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/textView2"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView2"-->
+        <!--app:srcCompat="@drawable/ic_photo_camera_black_24dp" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="49dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:text="@string/bf_ativar_camera"-->
+        <!--android:textSize="16dp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/IconeTirarFoto"-->
+        <!--app:layout_constraintVertical_bias="0.0" />-->
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
-        android:layout_marginTop="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:text="@string/bf_carregar_foto"
         android:textSize="16dp"
         android:textStyle="bold"
@@ -67,4 +87,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IconeCarregarFoto" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

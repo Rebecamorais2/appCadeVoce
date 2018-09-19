@@ -4,6 +4,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="facebook_app_id">158156681557323</string>
     <string name="fb_login_protocol_scheme">fb158156681557323</string>
+    
+    <!-- ID google -->
+    <string name="server_client_id">649882775476-v8jcd1lcsmk0enrpnc8629juoi1itnt1.apps.googleusercontent.com</string>
 
     <!--Tela de login-->
     <string name="login_email">E-mail</string>
