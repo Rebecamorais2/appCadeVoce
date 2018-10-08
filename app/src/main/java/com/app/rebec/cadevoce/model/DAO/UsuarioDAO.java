@@ -40,6 +40,7 @@ public class UsuarioDAO {
 
     //Criar usuário
     private static final String URL= "https://cadevoce.azurewebsites.net/service/usuarios";
+//    private static final String URL= "https://192.168.1.12/cadevoceWS/service/usuarios";
     private static String NAMESPACE = "";
 
     private static String INSERIR = "add";

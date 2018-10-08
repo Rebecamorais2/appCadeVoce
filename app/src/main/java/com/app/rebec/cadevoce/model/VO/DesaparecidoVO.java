@@ -8,7 +8,6 @@ public class DesaparecidoVO {
     private String nome;
     private int idade;
     private double altura;
-    private String sexo;
     private String dataDesaparecimento;
     private String dataCadastro;
 
@@ -24,6 +23,7 @@ public class DesaparecidoVO {
     RacaDesapVO raca = new RacaDesapVO();
     UsuarioVO usuario = new UsuarioVO();
     EstadoVO estado = new EstadoVO();
+    SexoVO sexo = new SexoVO();
 
     private int idCidade = cidade.codigo;
     private int idCorCabelo = corcabelo.codigo;
@@ -31,12 +31,14 @@ public class DesaparecidoVO {
     private int idParentesco = parentesco.codigo;
     private int idRaca = raca.codigo;
     private int idUsuario = usuario.codigo;
+    private int idSexo = sexo.codigo;
     private String cidDescricao = cidade.descricao;
     private String estDescricao = estado.descricao;
     private String racaDescricao = raca.descricao;
     private String olhosDescricao = corolhos.descricao;
     private String cabeloDescricao = corcabelo.descricao;
     private String parentescoDescricao = parentesco.descricao;
+    private String sexoDescricao = sexo.descricao;
 
 
 
@@ -45,14 +47,13 @@ public class DesaparecidoVO {
     public DesaparecidoVO(int codDesap, String nome, int idade, double altura, String sexo,
                           String dataDesaparecimento, String dataCadastro, int telefoneContato, String descricao, int idFaces,
                           boolean fotoPrincipal, int idCidade, int idCorCabelo, int idCorOlhos, int idParentesco,
-                          int idRaca, int idUsuario, String cidDescricao, String estDescricao, String racaDescricao, String olhosDescricao,
-                          String cabeloDescricao, String parentescoDescricao) {
+                          int idRaca, int idUsuario, int idSexo, String cidDescricao, String estDescricao, String racaDescricao, String olhosDescricao,
+                          String cabeloDescricao, String parentescoDescricao, String sexoDescricao) {
         super();
         this.codDesap = codDesap;
         this.nome = nome;
         this.idade = idade;
         this.altura = altura;
-        this.sexo = sexo;
         this.dataDesaparecimento = dataDesaparecimento;
         this.dataCadastro = dataCadastro;
         this.telefoneContato = telefoneContato;
@@ -65,12 +66,14 @@ public class DesaparecidoVO {
         this.idParentesco = idParentesco;
         this.idRaca = idRaca;
         this.idUsuario = idUsuario;
+        this.idSexo = idSexo;
         this.estDescricao = estDescricao;
         this.cidDescricao = cidDescricao;
         this.racaDescricao = racaDescricao;
         this.olhosDescricao = olhosDescricao;
         this.cabeloDescricao = cabeloDescricao;
         this.parentescoDescricao = parentescoDescricao;
+        this.sexoDescricao = sexoDescricao;
     }
 
 
@@ -97,12 +100,6 @@ public class DesaparecidoVO {
     }
     public void setAltura(double altura) {
         this.altura = altura;
-    }
-    public String getSexo() {
-        return sexo;
-    }
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
     }
     public String getDataDesaparecimento() {
         return dataDesaparecimento;
@@ -176,6 +173,12 @@ public class DesaparecidoVO {
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
+    public int getIdSexo() {
+        return idSexo;
+    }
+    public void setIdSexo(int idSexo) {
+        this.idSexo = idSexo;
+    }
     public String getEstDescricao() {
         return estDescricao;
     }
@@ -211,5 +214,11 @@ public class DesaparecidoVO {
     }
     public void setParentescoDescricao(String parentescoDescricao) {
         this.parentescoDescricao = parentescoDescricao;
+    }
+    public String getSexoDescricao() {
+        return sexoDescricao;
+    }
+    public void setSexoDescricao(String sexoDescricao) {
+        this.sexoDescricao = sexoDescricao;
     }
 }

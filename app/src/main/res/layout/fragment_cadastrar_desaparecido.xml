@@ -23,6 +23,7 @@
 
             <!--Nome-->
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_nome"
@@ -40,6 +41,7 @@
 
             <!--Idade-->
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputIdade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_idade"
@@ -90,27 +92,7 @@
 
         <!--Floating-->
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMTipoCabelo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            app:errorEnabled="true">
-
-            <!--Tipo do Cabelo Spinner-->
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                android:id="@+id/tipo_cabelo_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/md_tipo_cabelo"
-                app:errorEnabled="true" />
-
-        </android.support.design.widget.TextInputLayout>
-
-
-        <!--Floating-->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdCorCabelo"
+            android:id="@+id/CorCabelo_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -129,7 +111,7 @@
 
         <!--Floating-->
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdAltura"
+            android:id="@+id/inputAltura"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">
@@ -166,7 +148,7 @@
 
         <!--Floating-->
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdEstado"
+            android:id="@+id/cidade_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -196,8 +178,7 @@
                 android:id="@+id/edtAutoCompleteCidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/md_cidade"
-                app:errorEnabled="true"/>
+                android:hint="@string/md_cidade" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -205,7 +186,7 @@
 
         <!--Floating-->
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdDtDesaparecimento"
+            android:id="@+id/inputDataDesaparecimento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">
@@ -242,7 +223,7 @@
 
         <!--Floating-->
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdTelefoneContato"
+            android:id="@+id/inputTelefoneContato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">
@@ -258,7 +239,7 @@
 
         <!--Floating-->
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdDescricao"
+            android:id="@+id/inputDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">

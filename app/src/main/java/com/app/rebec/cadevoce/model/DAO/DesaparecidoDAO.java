@@ -46,7 +46,6 @@ public class DesaparecidoDAO {
             desaparecidoJSON.put("idade",desaparecido.getIdade());
             desaparecidoJSON.put("altura",desaparecido.getAltura());
 
-            desaparecidoJSON.put("sexo", desaparecido.getSexo());
             desaparecidoJSON.put("dataDesaparecimento", desaparecido.getDataDesaparecimento());
             desaparecidoJSON.put("dataCadastro", desaparecido.getDataCadastro());
             desaparecidoJSON.put("telefoneContato",desaparecido.getTelefoneContato());
@@ -65,7 +64,7 @@ public class DesaparecidoDAO {
 
 
         } catch (JSONException ex) {
-            Log.d("USUARIO", "Error " + ex.getLocalizedMessage());
+            Log.d("Desaparecido", "Error " + ex.getLocalizedMessage());
         }
 
         JsonObjectRequest addDesaparecidoRequest = new JsonObjectRequest
