@@ -1,4 +1,4 @@
-package com.app.rebec.cadevoce.view;
+package com.app.rebec.cadevoce.view.util;
 
 public enum Page {
     Login,
@@ -12,10 +12,15 @@ public enum Page {
     CadastrarDesaparecido,
     ManterDesaparecido,
     CadastrosRecentes,
+    CadastrosRecentesDetails,
+    MeusCadastros,
     CadastrarUsuario,
     GoogleMaps,
     Sobre,
     TermosUso,
     OndeProcurar,
-    Perdidos
+    EncontreiAlguem,
+    Sair,
+    ListResultBuscarNome,
+    EditarCadastro
 }

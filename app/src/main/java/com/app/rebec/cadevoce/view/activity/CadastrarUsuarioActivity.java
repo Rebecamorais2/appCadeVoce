@@ -1,46 +1,36 @@
-package com.app.rebec.cadevoce.view;
+package com.app.rebec.cadevoce.view.activity;
 
-import android.os.Build;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.app.rebec.cadevoce.R;
-import com.app.rebec.cadevoce.model.DAO.CadastrarUsuarioDAO;
 import com.app.rebec.cadevoce.model.DAO.UsuarioDAO;
 import com.app.rebec.cadevoce.model.VO.UsuarioVO;
 
-public class CadastrarUsuarioActivity extends AppCompatActivity {
-
-    private EditText inputNome;
-    private EditText inputEmail;
-    private EditText inputSenha;
-    private EditText inputConfirmaSenha;
-    private Button btnCriar;
-
+public class CadastrarUsuarioActivity extends AppCompatActivity implements UsuarioDAO.UsuarioDAODelegate {
 
 
     // private UsuarioRepository crud = new UsuarioRepository(getBaseContext());
     private UsuarioDAO db = new UsuarioDAO();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_usuario);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
 
-        final EditText inputNome = (EditText)  findViewById(R.id.inputNome);
-        final EditText inputEmail = (EditText)  findViewById(R.id.inputEmail);
-        final EditText inputSenha = (EditText)  findViewById(R.id.inputSenha);
-        final EditText inputConfSenha = (EditText)  findViewById(R.id.inputConfirmaSenha);
-        Button btn = (Button)findViewById (R.id.btnCriar);
+        db.setDelegate(this);
+
+        final EditText inputNome = (EditText) findViewById(R.id.inputNome);
+        final EditText inputEmail = (EditText) findViewById(R.id.inputEmail);
+        final EditText inputSenha = (EditText) findViewById(R.id.inputSenha);
+        final EditText inputConfSenha = (EditText) findViewById(R.id.inputConfirmaSenha);
+        Button btn = (Button) findViewById(R.id.btnCriar);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +38,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
 
                 try {
+
                     cadastrar2();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -75,15 +66,40 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                         user.setEmail(email);
                         user.setSenha(senha);
                         db.inserirUsuario(user, CadastrarUsuarioActivity.this);
-                        Toast.makeText(CadastrarUsuarioActivity.this, "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
 
-                        inputNome.setText("");
-                        inputEmail.setText("");
-                        inputSenha.setText("");
-                        inputConfSenha.setText("");
+                        //Toast.makeText(CadastrarUsuarioActivity.this, "Usuário cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
+
+
                     }
                 }
             }
         });
     }
+
+    @Override
+    public void usuarioGravado(int id) {
+        if (id != 0) {
+            final EditText inputNome = (EditText) findViewById(R.id.inputNome);
+            final EditText inputEmail = (EditText) findViewById(R.id.inputEmail);
+            final EditText inputSenha = (EditText) findViewById(R.id.inputSenha);
+            final EditText inputConfSenha = (EditText) findViewById(R.id.inputConfirmaSenha);
+
+            inputNome.setText("");
+            inputEmail.setText("");
+            inputSenha.setText("");
+            inputConfSenha.setText("");
+            Toast.makeText(CadastrarUsuarioActivity.this, "Usuário cadastrado com sucesso!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(CadastrarUsuarioActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+//        Toast.makeText(CadastrarUsuarioActivity.this, "Usuário cadastrado com sucesso(" + id + ")!", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(CadastrarUsuarioActivity.this, "Email já cadastrado!", Toast.LENGTH_LONG).show();
+        }
+
+
+    }
+
+
 }

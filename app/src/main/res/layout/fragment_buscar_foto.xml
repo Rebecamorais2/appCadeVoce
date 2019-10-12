@@ -1,90 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.app.rebec.cadevoce.view.BuscarFotoFragment">
+    tools:context="com.app.rebec.cadevoce.view.fragments.BuscarFotoFragment">
 
-
-    <TextView
-        android:id="@+id/Menu"
-        android:layout_width="0dp"
-        android:layout_height="89dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/bf_atencao"
-        android:textAlignment="center"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/imageView1"
-        android:layout_above="@+id/button1" />
-    <Button
-        android:id="@+id/button1"
+    <LinearLayout
+        android:id="@+id/linearLayoutBuscarFoto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:text="Upload" />
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265"
+        tools:layout_editor_absoluteX="0dp"
+        tools:padding="10dp">
 
-    <!--<ImageView-->
-        <!--android:id="@+id/IconeCarregarFoto"-->
-        <!--android:layout_width="141dp"-->
-        <!--android:layout_height="87dp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.502"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/Menu" />-->
+        <ImageView
+            android:id="@+id/buscar_imagem"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
-    <!--<ImageView-->
-        <!--android:id="@+id/IconeTirarFoto"-->
-        <!--android:layout_width="129dp"-->
-        <!--android:layout_height="121dp"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_below="@+id/Menu"-->
-        <!--android:layout_marginStart="108dp"-->
-        <!--app:layout_constraintEnd_toStartOf="@+id/textView2"-->
-        <!--app:layout_constraintStart_toEndOf="@+id/textView2"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/textView2"-->
-        <!--app:srcCompat="@drawable/ic_photo_camera_black_24dp" />-->
+        <Button
+            android:id="@+id/btn_escolher_foto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Carregar Foto" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/textView"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="49dp"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:text="@string/bf_ativar_camera"-->
-        <!--android:textSize="16dp"-->
-        <!--android:textStyle="bold"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/IconeTirarFoto"-->
-        <!--app:layout_constraintVertical_bias="0.0" />-->
+        <Button
+            android:id="@+id/btn_envia_foto"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar" />
 
-    <TextView
-        android:id="@+id/textView2"
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linhabtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutBuscarFoto"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="9dp"
+        tools:padding="1dp">
+
+        <Button
+            android:id="@+id/btncadastrarDesap3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_alignEnd="@+id/linhabtn2"
+            android:text="Cadastrar" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/listaBuscarPorFoto"
         android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/bf_carregar_foto"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IconeCarregarFoto" />
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linhabtn2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleViewContainer4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linhabtn2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

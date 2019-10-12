@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.rebec.cadevoce.view.CadastrarDesaparecidoFragment">
+    tools:context="com.app.rebec.cadevoce.view.fragments.CadastrarDesaparecidoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,8 @@
         android:orientation="vertical"
         tools:padding="16dp">
 
-        <!--Floating-->
+
+        <!--Nome Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/edtMdNome"
             android:layout_width="match_parent"
@@ -23,7 +24,7 @@
 
             <!--Nome-->
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/inputNome"
+                android:id="@+id/inputNomeDesap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_nome"
@@ -32,7 +33,7 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
+        <!--Idade Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/edtMdIdade"
             android:layout_width="match_parent"
@@ -50,7 +51,7 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
+        <!--Raça Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/edtMRaca"
             android:layout_width="match_parent"
@@ -70,7 +71,8 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
+
+        <!--Cor dos Olhos Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/edtMdOlhos"
             android:layout_width="match_parent"
@@ -81,7 +83,7 @@
 
             <!--Cor dos Olhos Spinner-->
             <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                android:id="@+id/cor_dos_olhos_spinner"
+                android:id="@+id/corOlhos_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_cor_olhos"
@@ -90,7 +92,7 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
+        <!--Cor do Cabelo Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/CorCabelo_spinner"
             android:layout_width="match_parent"
@@ -101,7 +103,7 @@
 
             <!--Cor do Cabelo Spinner-->
             <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                android:id="@+id/cor_cabelo_spinner"
+                android:id="@+id/corCabelo_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_cor_cabelo"
@@ -109,7 +111,8 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <!--Floating-->
+
+        <!--Altura Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/inputAltura"
             android:layout_width="match_parent"
@@ -118,6 +121,7 @@
 
             <!--Altura-->
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputAltura2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_altura"
@@ -126,7 +130,7 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
+        <!-- Sexo Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/edtMdSexo"
             android:layout_width="match_parent"
@@ -135,56 +139,70 @@
             android:layout_marginRight="4dp"
             app:errorEnabled="true">
 
-            <!--Sexo Spinner-->
+            <!-- Sexo Spinner-->
             <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
                 android:id="@+id/sexo_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/md_sexo"
+                android:hint="Sexo"
                 app:errorEnabled="true" />
 
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/cidade_spinner"
+        <!--Texto "Estado"-->
+        <TextView
+            style="@style/InputLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="Estado" />
+
+        <!--Estados Spinner-->
+        <Spinner
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/stateSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        <!--Linha divisória-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-            app:errorEnabled="true">
+            android:background="@android:color/darker_gray" />
 
-            <!--Estado Spinner-->
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                android:id="@+id/estado_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/md_estado"
-                app:errorEnabled="true" />
-
-        </android.support.design.widget.TextInputLayout>
-
-
-        <!--Floating-->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdCidade"
+        <!--Texto "Cidades"-->
+        <TextView
+            android:layout_marginTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:errorEnabled="true">
+            android:text="Cidade"
+            style="@style/InputLabel" />
 
-            <!--Cidades-->
-            <AutoCompleteTextView
-                android:id="@+id/edtAutoCompleteCidade"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/md_cidade" />
+        <!--Spinner Cidades-->
+        <Spinner
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/citiesSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
-        </android.support.design.widget.TextInputLayout>
+        <!--Linha divisória-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="40dp"
+            android:background="@android:color/darker_gray" />
 
 
 
-        <!--Floating-->
+        <!--Data do Desaparecimento Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/inputDataDesaparecimento"
             android:layout_width="match_parent"
@@ -193,6 +211,7 @@
 
             <!--Data do desaparecimento-->
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputDataDesaparecimento2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_dt_desaparecimento"
@@ -201,27 +220,27 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
+
+        <!--Parentesco Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/edtMdParentesco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
             app:errorEnabled="true">
 
-            <!--Parentesco Spinner-->
-            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
-                android:id="@+id/parentesco_spinner"
+            <!--Parentesco-->
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputParentesco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/md_parentesco"
-                app:errorEnabled="true" />
+                android:hint="Nome do contato"
+                android:inputType="textPersonName" />
 
         </android.support.design.widget.TextInputLayout>
 
 
-        <!--Floating-->
+
+        <!--Telefone Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/inputTelefoneContato"
             android:layout_width="match_parent"
@@ -230,6 +249,7 @@
 
             <!--Telefone para contato-->
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputTelefoneContato2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_telefone"
@@ -237,66 +257,41 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <!--Floating-->
+
+        <!--Descrição Floating-->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/inputDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="500"
             app:errorEnabled="true">
 
             <!--Descrição-->
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/inputDescricao2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/md_descricao"
-                android:inputType="textLongMessage"
-                android:singleLine="false" />
+                android:inputType="textMultiLine"/>
 
         </android.support.design.widget.TextInputLayout>
 
-        <!--Imagem de upload-->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/edtMdUpload"
+
+
+        <Button
+            android:id="@+id/choose"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
-            app:errorEnabled="true">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Escolher Foto" />
 
-            <!--Deixar o texto e a imagem alinhados horizontalmente-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
-                <!--Texto-->
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="122dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:text="Carregar Foto"
-                    android:textSize="18sp" />
 
-                <!--Imagem-->
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="4dp"
-                    app:srcCompat="@android:drawable/stat_sys_upload" />
-
-            </LinearLayout>
-
-            <!--Linha cinza abaixo do texto (divisória)-->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:background="@android:color/darker_gray" />
-
-        </android.support.design.widget.TextInputLayout>
 
 
         <CheckBox
@@ -307,12 +302,28 @@
 
 
         <Button
-            android:id="@+id/salvarCadastro"
+            android:id="@+id/btncadastrarDesap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/md_salvar_cadastro" />
+            android:layout_margin="10dp"
+            android:text="Salvar Cadastro" />
 
 
+        <!--Deixar o texto e a imagem alinhados horizontalmente-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <!--Linha cinza abaixo do texto (divisória)-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@android:color/darker_gray" />
 
     </LinearLayout>
 

@@ -20,6 +20,10 @@
         android:id="@+id/nav_delegacias"
         android:icon="@drawable/ic_domain_black_24dp"
         android:title="@string/delegacia" />
+        <item
+            android:id="@+id/termoResp"
+            android:icon="@drawable/ic_termos_uso"
+            android:title="@string/termos_uso" />
 </group>
 
     <item android:title="@string/others">

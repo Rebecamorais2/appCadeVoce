@@ -1,8 +1,9 @@
-package com.app.rebec.cadevoce.view;
+package com.app.rebec.cadevoce.view.fragments;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,16 +12,10 @@ import android.widget.Button;
 
 import com.app.rebec.cadevoce.presenter.PageController;
 import com.app.rebec.cadevoce.R;
+import com.app.rebec.cadevoce.view.util.Page;
+import com.app.rebec.cadevoce.view.util.TargetPage;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link HomeFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class HomeFragment extends Fragment implements TargetPage {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,16 +62,15 @@ public class HomeFragment extends Fragment implements TargetPage {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        Button buscar = (Button) view.findViewById(R.id.button2);
+        Button buscar = (Button) view.findViewById(R.id.buscarDesaparecido);
         buscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Como faço para inserir mais opções aqui?/
+
                 if (navigationController != null) {
                     //navigationController.changePage(Page.GoogleMaps, null);
                     navigationController.changePage(Page.Buscar, null);
@@ -84,14 +78,38 @@ public class HomeFragment extends Fragment implements TargetPage {
             }
         });
 
-        Button cadastrarDesaparecido = (Button) view.findViewById(R.id.button3);
+        Button cadastrarDesaparecido = (Button) view.findViewById(R.id.cadastrarDesaparecido);
         cadastrarDesaparecido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Como faço para inserir mais opções aqui?/
+
                 if (navigationController != null) {
-                    //navigationController.changePage(Page.GoogleMaps, null);
+
                     navigationController.changePage(Page.CadastrarDesaparecido, null);
+                }
+            }
+        });
+
+        Button cadastrosRecentes = (Button) view.findViewById(R.id.cadastrosRecentes);
+        cadastrosRecentes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (navigationController != null) {
+
+                    navigationController.changePage(Page.CadastrosRecentes, null);
+                }
+            }
+        });
+
+        Button meusCadastros = (Button) view.findViewById(R.id.meusCadastros);
+        meusCadastros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (navigationController != null) {
+
+                    navigationController.changePage(Page.MeusCadastros, null);
                 }
             }
         });
@@ -113,8 +131,7 @@ public class HomeFragment extends Fragment implements TargetPage {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
 

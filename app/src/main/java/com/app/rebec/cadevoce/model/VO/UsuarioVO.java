@@ -1,5 +1,7 @@
 package com.app.rebec.cadevoce.model.VO;
+
 import android.content.Context;
+
 public class UsuarioVO {
 
     protected int codigo;
@@ -12,10 +14,10 @@ public class UsuarioVO {
     protected String idGoogle;
 
 
-    public UsuarioVO() {}
+    public UsuarioVO() {
+    }
 
-    public UsuarioVO(int codigo, String nome, String email, String senha, String confSenha, String idFotoPerfil,
-                     String idFacebook, String idGoogle) {
+    public UsuarioVO(int codigo, String nome, String email, String senha, String confSenha, String idFotoPerfil, String idFacebook, String idGoogle) {
         super();
         this.codigo = codigo;
         this.nome = nome;
@@ -31,24 +33,31 @@ public class UsuarioVO {
     public int getCodigo() {
         return codigo;
     }
+
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
     public String getSenha() {
         return senha;
     }
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
@@ -56,18 +65,23 @@ public class UsuarioVO {
     public String getIdFotoPerfil() {
         return idFotoPerfil;
     }
+
     public void setIdFotoPerfil(String idFotoPerfil) {
         this.idFotoPerfil = idFotoPerfil;
     }
+
     public String getIdFacebook() {
         return idFacebook;
     }
+
     public void setIdFacebook(String idFacebook) {
         this.idFacebook = idFacebook;
     }
+
     public String getIdGoogle() {
         return idGoogle;
     }
+
     public void setIdGoogle(String idGoogle) {
         this.idGoogle = idGoogle;
     }
@@ -76,9 +90,11 @@ public class UsuarioVO {
     public String getConfSenha() {
         return confSenha;
     }
+
     public void setConfSenha(String confSenha) {
         this.confSenha = confSenha;
     }
+
 
 }
 

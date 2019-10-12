@@ -1,4 +1,4 @@
-package com.app.rebec.cadevoce.view;
+package com.app.rebec.cadevoce.view.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -11,6 +11,8 @@ import android.widget.Button;
 
 import com.app.rebec.cadevoce.R;
 import com.app.rebec.cadevoce.presenter.PageController;
+import com.app.rebec.cadevoce.view.util.Page;
+import com.app.rebec.cadevoce.view.util.TargetPage;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,7 +22,7 @@ import com.app.rebec.cadevoce.presenter.PageController;
  * Use the {@link BuscarFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BuscarFragment extends Fragment implements TargetPage{
+public class BuscarFragment extends Fragment implements TargetPage {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -67,8 +69,7 @@ public class BuscarFragment extends Fragment implements TargetPage{
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_buscar, container, false);
 
@@ -113,8 +114,7 @@ public class BuscarFragment extends Fragment implements TargetPage{
         if (context instanceof HomeFragment.OnFragmentInteractionListener) {
             mListener = (HomeFragment.OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
         }
     }
 

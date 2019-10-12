@@ -1,10 +1,15 @@
 <resources>
-    <string name="app_name">CadeVoce</string>
+    <string name="app_name">Cadê Você?</string>
+
+    <string name="delete_view">Delete clicked view</string>
+
+    <string name="title_activity_google_maps_api">GoogleMaps</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCNKlvunN3C9obD5xhVWn8VO0_ErRJZqpU</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="facebook_app_id">158156681557323</string>
     <string name="fb_login_protocol_scheme">fb158156681557323</string>
-    
+
     <!-- ID google -->
     <string name="server_client_id">649882775476-v8jcd1lcsmk0enrpnc8629juoi1itnt1.apps.googleusercontent.com</string>
 
@@ -40,13 +45,14 @@
     <string name="home">Home</string>
     <string name="onde_procurar">Onde Procurar?</string>
     <string name="perdidos">Encontrou alguém perdido?</string>
-    <string name="delegacia">Delegacia mais Próxima</string>
+    <string name="delegacia">Delegacias mais Próximas</string>
+    <string name="termos_uso">Termos de Uso</string>
     <string name="others">Outras opções"</string>
     <string name="sobre">Sobre o aplicativo</string>
     <string name="sair">Sair</string>
 
     <!--menu-->
-    <string name="action_settings">Cofiguração</string>
+    <string name="remover_conta">Remover Conta</string>
     <string name="title_activity_cadastro_usuario">CadastroUsuario</string>
     <string name="title_activity_google_maps">Map</string>
     <string name="title_activity_main">MainActivity</string>
@@ -78,7 +84,7 @@
 
     <string name="md_carregar_foto">Carregar foto</string>
     <string name="md_salvar_cadastro">Salvar cadastro</string>
-    <string name="md_termo_resp">Aceitar os termos de responsabilidade</string>
+    <string name="md_termo_resp">Aceitar os termos de uso</string>
 
     <!--Tela Buscar-->
     <string name="buscarNome">Buscar por Nome</string>
@@ -97,7 +103,5 @@
     <string name="usuario_criar_conta">Criar Conta</string>
     <string name="title_activity_login">LoginActivity</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_cadastrar_usuario">CadastrarUsuarioActivity</string>
+
 </resources>
